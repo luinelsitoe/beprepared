@@ -3,7 +3,7 @@ RUN apt-get update
 RUN apt-get install openjdk-21-jdk -y
 COPY . .
 RUN apt-get install maven -y
-RUN mv clean install
+RUN mvn clean install
 
 FROM openjdk:21-slim
 COPY --from=build /target/*.jar ./beprepared.jar
