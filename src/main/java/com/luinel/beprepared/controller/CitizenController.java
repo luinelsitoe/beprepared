@@ -5,6 +5,7 @@ import com.luinel.beprepared.dto.response.CitizenResponseDto;
 import com.luinel.beprepared.mapper.Mapper;
 import com.luinel.beprepared.model.Citizen;
 import com.luinel.beprepared.service.CitizenService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -18,6 +19,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/citizens")
+@Tag(name = "3. Citizen Controller")
 public class CitizenController {
 
     private final Mapper mapper;
